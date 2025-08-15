@@ -1,103 +1,181 @@
+import Button from "@/components/Button";
+import CardService from "@/components/CardService";
+import CardTecnologia from "@/components/CardTecnologia";
+import ItemNumber from "@/components/ItemNumber";
+import Navbar from "@/components/Navbar";
+import OtherService from "@/components/OtherService";
 import Image from "next/image";
+import { FaGlobe, FaRegStar } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { HiOutlineWrench } from "react-icons/hi2";
+import { IoSettingsOutline } from "react-icons/io5";
+
+
+
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+      <Navbar/>
+      <section className="px-48 py-24 bg-background flex flex-col items-center text-gray-800 ">
+        <div className="flex gap-3 items-center justify-center font-medium text-sm py-1 px-3 bg-white rounded-full border border-gray-200 w-fit text-gray-600 mb-8">
+          <FaRegStar className="text-yellow-500" />
+          <span className="font-medium ">Disponível para novos projetos</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <h1 className="text-5xl py-4 font-bold bg-gradient-to-r from-primary via-indigo-500 to-purple-800 bg-clip-text text-transparent flex flex-col items-center justify-center">
+          <span className="text-gray-800">Olá, eu sou</span>
+          Sofia Parreira Passos
+        </h1>
+        <h2 className="text-xl font-medium text-gray-700">Desenvolvedora web front-end e back-end</h2>
+        <p className="text-gray-600 py-8">Transformo suas ideias em experi~enciadsçfasdflkasdjfalkjsdflkjasdlkfjalksjdflkasjdfas</p>
+
+        <Button text={'Ver Projetos'} sufix={<FaArrowRightLong />} className={'w-fit'} />
+
+        <div className="py-8 grid grid-cols-3 gap-16">
+          <ItemNumber label={'Projetos Concluídos'} value={'10 +'} />
+          <ItemNumber label={'Anos de Experiência'} value={'3 +'} />
+          <ItemNumber label={'Avaliação Média'} value={'5 ★'} />
+
+        </div>
+      </section>
+
+      <section className="px-48 py-16 mt-8 bg-white">
+        <h1 className="text-3xl font-bold">Serviços que Ofereço</h1>
+        <p className="">Soluções completas de desenvolvimento web para impulsionar seu negócio digital</p>
+
+        <div class="grid grid-cols-3 gap-8 mt-16">
+          <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+
+          <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+
+          <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+
+            <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+
+            <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+
+            <CardService
+            title={'Websites Institucionais'}
+            isWordpress={true}
+            isCode={true}
+            icon={<FaGlobe />}
+            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+        </div>
+
+        <div className="relative w-full  overflow-hidden rounded-lg bg-gradient-to-r from-[#EEF2FF] from-20% to-[#F9F5FF] my-16 border-2 border-gray-100 shadow-lg shadow-gray-200">
+          {/* Bolinha no canto direito topo */}
+          <div className="absolute -top-8 -right-8 w-32 h-32 bg-background rounded-full opacity-50"></div>
+
+          {/* Bolinha no canto esquerdo baixo */}
+          <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#E5E8FF] rounded-full opacity-50"></div>
+
+          {/* Conteúdo */}
+          <div className="relative p-8">
+            <div class="flex gap-3 items-center justify-center">
+              <div className='bg-gradient-to-r from-primary to-purple-600 text-white p-2.5 text-xl rounded-lg w-fit group-hover:scale-110 duration-300 transition'><HiOutlineWrench />
+              </div>
+
+              <h2 className="text-2xl font-bold">Outros Serviços Disponíveis</h2>
+             
+            </div>
+             <p className="text-center w-1/2 mx-auto my-8">Além dos serviços principais, também ofereço suporte especializado para diversas necessidades do seu negócio digital.</p>
+            
+              <div class="grid grid-cols-3 gap-16">
+                <OtherService
+                  title={'Manutenção de Sites'}
+                  description={'Atualizações, correções e melhorias contínuas para manter seu site sempre funcionando perfeitamente.'}
+                  icon={<IoSettingsOutline />}
+                />
+
+                <OtherService
+                  title={'Ajustes e Melhorias'}
+                  description={'Pequenos ajustes, correções de bugs e implementação de novas funcionalidades em sites existentes'}
+                  icon={<IoSettingsOutline />}
+                />
+
+                <OtherService
+                  title={'Shopify'}
+                  description={'Criação, customização e otimização de lojas Shopify'}
+                  icon={<IoSettingsOutline />}
+                />
+                
+                
+              </div>
+              <div className="bg-white/80  rounded-xl text-sm py-3.5 mt-10 flex justify-center items-center gap-2">
+                💡<span className="font-medium">Precisa de algo específico? </span> <span>Entre em contato para conversarmos sobre sua necessidade</span>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-48 py-16">
+        <h1 className="text-3xl font-bold mb-2 text-center">Tecnologias que domino</h1>
+        <p className="text-center">Aqui está uma lista de técnologias que eu costumo trabalhar</p>
+
+        <div className="grid grid-cols-5 gap-8 mt-16">
+          <CardTecnologia name={'Next'} />
+          <CardTecnologia name={'React'} />
+          <CardTecnologia name={'Vite'} />
+          <CardTecnologia name={'Angular'} />
+          <CardTecnologia name={'TypeScript'} />
+          <CardTecnologia name={'JavaScript'} />
+          <CardTecnologia name={'Node.js'} />
+          <CardTecnologia name={'HTML5'} />
+          <CardTecnologia name={'CSS3'} />
+          <CardTecnologia name={'Tailwind'} />
+          <CardTecnologia name={'PostgreSQL'} />
+          <CardTecnologia name={'SQL'} />
+        </div>
+      </section>
+
+<section className="relative w-full py-16 px-48 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-purple-200 via-purple-100 to-pink-100">
+  {/* Bolinhas abstratas */}
+  <div className="absolute top-[-100px] left-[-100px] w-72 h-72 bg-purple-400 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+  <div className="absolute bottom-[-80px] right-[-80px] w-96 h-96 bg-pink-300 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+
+  {/* Conteúdo */}
+  <div className="relative z-10 text-center px-6">
+    <h1 className="text-3xl font-bold text-gray-900">
+      Pronto para transformar <span className="text-primary">sua ideia em realidade?</span>
+    </h1>
+    <p className="mt-4 text-gray-700">
+      Vamos conversar sobre seu projeto e descobrir como posso ajudar seu negócio a crescer no mundo digital.
+    </p>
+
+    
+    
+    
+  </div>
+</section>
+
+
+    </main>
   );
 }

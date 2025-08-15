@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import { FaCode } from 'react-icons/fa'
@@ -15,9 +16,9 @@ const Navbar = () => {
         </div>
         <ul className='flex justify-center items-center gap-8'>
             <li 
-                className={`text-sm font-medium py-1 px-2 ${pathname === '/' ? 'border-b-2 border-primary text-primary' : ''}`}>Início</li>
-            <li className={`text-sm font-medium py-1 px-2 ${pathname === '/projects' ? 'border-b-2 border-primary text-primary' : ''}`}>Projetos</li>
-            <li className={`text-sm font-medium py-1 px-2 ${pathname === '/contact' ? 'border-b-2 border-primary text-primary' : ''}`}>Contato</li>
+                className={`text-sm font-medium py-1 px-2 cursor-pointer ${pathname === '/' ? 'border-b-2 border-primary text-primary' : ''}`}><Link href={'/'}>Início</Link></li>
+            <li className={`text-sm font-medium py-1 px-2 cursor-pointer ${pathname === '/projects' ? 'border-b-2 border-primary text-primary' : ''}`}><Link href={'/projects'}>Projetos</Link></li>
+            <li className={`text-sm font-medium py-1 px-2 cursor-pointer ${pathname === '/contact' ? 'border-b-2 border-primary text-primary' : ''}`}>Contato</li>
         </ul>
     </nav>
   )

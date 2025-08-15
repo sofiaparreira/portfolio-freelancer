@@ -13,6 +13,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { HiOutlineWrench } from "react-icons/hi2";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuMessageCircleMore } from "react-icons/lu";
+import CardFeedback from "@/components/card/CardFeedback";
 
 
 
@@ -47,8 +48,8 @@ export default function Home() {
       </section>
 
       <section className="px-48 py-16 mt-8 bg-white">
-        <h1 className="text-3xl font-bold">Serviços que Ofereço</h1>
-        <p className="">Soluções completas de desenvolvimento web para impulsionar seu negócio digital</p>
+        <h1 className="text-3xl font-bold text-center mb-2">Serviços que Ofereço</h1>
+        <p className=" text-center">Soluções completas de desenvolvimento web para impulsionar seu negócio digital</p>
 
         <div class="grid grid-cols-3 gap-8 mt-16">
           <CardService
@@ -162,10 +163,30 @@ export default function Home() {
 
       <section className="px-48 py-16">
         <h1 className="text-3xl font-bold mb-2 text-center">Feedbacks</h1>
-        <p className="text-center">Aqui está uma lista de técnologias que eu costumo trabalhar</p>
+        <p className="text-center">Feedb</p>
 
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 mt-16 gap-8">
+          <CardFeedback
+            description={'Sofia foi comprometida com o projeto e esforçada em entender os requisitos. Fez um bom trabalho e correu atrás do que era necessário para concluir as tarefas.'}
+            stars={5}
+            name={'Augusto'}
+            project={'Plataforma de cadastro de currículos'}
 
+          />
+          <CardFeedback
+            description={'asdfa adsfasd asdfas dfasdf asd asdf  asdfasdfasdf ds  asdfasdfas asdfasdf asdfasd asdf asdfasdfasdf  asdf asdf asdfasdf' }
+            stars={5}
+            name={'Thiago Bristolini'}
+            project={'Identidade visual e logo: Na casa restaurante'}
+
+          />
+          <CardFeedback
+            description={'Eu adorei o trabalho, transmite exatamente a proposta do restaurante. Sofia foi comprometida e explicou todos os conceitos e técnicas por trás do design.'}
+            stars={5}
+            name={'Luiz Mauro'}
+            project={'Identidade visual e logo: Na casa restaurante'}
+
+          />
         </div>
 
       </section>

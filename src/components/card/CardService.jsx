@@ -6,8 +6,8 @@ const CardService = ({title, text, isWordpress, isCode, icon}) => {
         <div className='flex items-center justify-center mb-6'>
                 <div className='bg-gradient-to-r from-primary to-purple-600 text-white p-4 text-xl rounded-xl w-fit group-hover:scale-110 duration-300 transition'>{icon}</div>
             </div>
-        <h2 className='text-xl font-semibold pb-2'>{title}</h2>
-        <p className='w-full text-gray-600'>{text}</p>
+        <h2 className='text-lg font-semibold pb-2 text-center'>{title}</h2>
+        <p className='w-full text-gray-600 text-sm'>{text}</p>
 
         <div className="flex mt-8 gap-2">
             {isCode && <span className='rounded-full bg-gray-100 border border-gray-200 px-3 py-1 text-sm'>Programação</span>}

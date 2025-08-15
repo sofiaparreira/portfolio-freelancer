@@ -1,3 +1,4 @@
+"use client"
 import Button from "@/components/Button";
 import CardService from "@/components/card/CardService";
 import CardTecnologia from "@/components/card/CardTecnologia";
@@ -5,22 +6,24 @@ import Footer from "@/components/Footer";
 import ItemNumber from "@/components/ItemNumber";
 import Navbar from "@/components/Navbar";
 import OtherService from "@/components/OtherService";
-import Image from "next/image";
-import { FaGlobe } from "react-icons/fa";
+import { FaGlobe, FaLaptopCode, FaPalette } from "react-icons/fa";
 import { TbPointFilled } from "react-icons/tb";
-
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiOutlineWrench } from "react-icons/hi2";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuMessageCircleMore } from "react-icons/lu";
 import CardFeedback from "@/components/card/CardFeedback";
-
-
-
-
+import { HiServerStack } from "react-icons/hi2";
+import { MdOutlineWeb } from "react-icons/md";
+import { FiShoppingCart } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
+
+  const router = useRouter()
+
+
   return (
     <main>
       <Navbar />
@@ -37,7 +40,14 @@ export default function Home() {
         <h2 className="text-xl font-medium text-gray-700">Desenvolvedora web front-end e back-end</h2>
         <p className="text-gray-600 py-8">Transformo suas ideias em experi~enciadsçfasdflkasdjfalkjsdflkjasdlkfjalksjdflkasjdfas</p>
 
-        <div class="w-fit"><Button text={'Ver Projetos'} sufix={<FaArrowRightLong />} /></div>
+        <div class="w-fit">
+          <Button 
+            text={'Ver Projetos'} 
+            sufix={<FaArrowRightLong />}
+            onClick={() => {
+              router.push('/projects')
+            }} />
+        </div>
 
         <div className="py-8 grid grid-cols-3 gap-16">
           <ItemNumber label={'Projetos Concluídos'} value={'10 +'} />
@@ -57,42 +67,37 @@ export default function Home() {
             isWordpress={true}
             isCode={true}
             icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+            text={'Sites institucionais desenvolvidos para exibir informações, com foco na divulgação e em facilitar que qualquer pessoa conheça seu negócio.'} />
 
           <CardService
-            title={'Websites Institucionais'}
-            isWordpress={true}
+            title={'Sistemas Web'}
             isCode={true}
-            icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+            icon={<FaLaptopCode />}
+            text={'Desenvolvo sistemas e plataformas web completos, com front-end e back-end, para automatizar processos e centralizar dados.'} />
 
           <CardService
-            title={'Websites Institucionais'}
+            title={'Web design'}
+            icon={<FaPalette />}
+            text={'Crio designs e identidades visuais para websites e aplicativos que unem estética e usabilidade, garantindo navegação intuitiva e visual alinhado à identidade da sua marca.'} /> 
+
+            <CardService
+            title={'E-commerce'}
             isWordpress={true}
             isCode={true}
-            icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+            icon={<FiShoppingCart />}
+            text={'Lojas virtuais completas com sistema de pagamento e gestão de produtos.'} />
 
           <CardService
-            title={'Websites Institucionais'}
-            isWordpress={true}
+            title={'APIs'}
             isCode={true}
-            icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+            icon={<HiServerStack />}
+            text={'Desenvolvo APIs para integrar sistemas de forma segura e eficiente, automatizando processos. Uma opção ideal caso você já tenha o front-end pronto.'} />
 
           <CardService
-            title={'Websites Institucionais'}
-            isWordpress={true}
+            title={'Front-End + Integração com API'}
             isCode={true}
-            icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
-
-          <CardService
-            title={'Websites Institucionais'}
-            isWordpress={true}
-            isCode={true}
-            icon={<FaGlobe />}
-            text={'Suspendisse nec nisi ultrices, lacinia metus eget, congue libero. Phasellus ac tortor scelerisque, molestie risus vel, condimentum justo. Praesent quis tempus enim. '} />
+            icon={<MdOutlineWeb />}
+            text={'Desenvolvo sites front-end integrados a APIs, uma opção ideal caso você já tenha um backend pronto.'} />
         </div>
 
         <div className="relative w-full  overflow-hidden rounded-lg bg-gradient-to-r from-[#EEF2FF] from-20% to-[#F9F5FF] my-16 border-2 border-gray-100 shadow-lg shadow-gray-200">
@@ -165,7 +170,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-2 text-center">Feedbacks</h1>
         <p className="text-center">Feedb</p>
 
-        <div className="grid grid-cols-3 mt-16 gap-8">
+        <div className="grid grid-cols-3 mt-16 gap-4">
           <CardFeedback
             description={'Sofia foi comprometida com o projeto e esforçada em entender os requisitos. Fez um bom trabalho e correu atrás do que era necessário para concluir as tarefas.'}
             stars={5}
@@ -174,10 +179,10 @@ export default function Home() {
 
           />
           <CardFeedback
-            description={'asdfa adsfasd asdfas dfasdf asd asdf  asdfasdfasdf ds  asdfasdfas asdfasdf asdfasd asdf asdfasdfasdf  asdf asdf asdfasdf' }
+            description={'Agradeço pelo excelente trabalho na criação do meu site.Você traduziu minhas necessidades em um layout funcional e esteticamente impecável. Além da qualidade técnica, apreciei sua paciência para ajustar cada etapa e o cuidado em entender o meu perfil profissional. O resultado superou minhas expectativas, parabéns pela competência e dedicação!' }
             stars={5}
-            name={'Thiago Bristolini'}
-            project={'Identidade visual e logo: Na casa restaurante'}
+            name={'Dr. Thiago Brustolini'}
+            project={'Site wordpress'}
 
           />
           <CardFeedback

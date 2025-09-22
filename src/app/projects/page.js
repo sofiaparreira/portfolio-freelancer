@@ -12,6 +12,7 @@ const page = () => {
 
       <div className='grid xl:grid-cols-3 grid-cols-2 gap-8 mt-16'>
         <CardProject 
+          onClick={'https://app.meuapecerto.com.br'}
           image={'/projetos/meuapecerto.png'} 
           title={'Sistema para imobiliária'}
           client={'Meu Apê Certo'}
@@ -21,6 +22,7 @@ const page = () => {
         stack={['Next', 'TypeScript', 'Tailwind']}/>
 
         <CardProject 
+        onClick={'https://brustolini.com'}
           image={'/projetos/medico.png'} 
           title={'Portfólio de Médico'}
           client={'Dr. Thiago Brustolini'}
@@ -32,9 +34,9 @@ const page = () => {
           image={'/projetos/meuapecerto.png'} 
           title={'ONG de adoção de cachorros e gatos'}
           client={'Instituto Anhangá'}
-          description={'Fui responsável por todo o processo. Fiz a identidade visual, web design, front-end e sistema interno com back-end.'} 
-          date={'janeiro 2025 - o momento'}
-        stack={['Next', 'TypeScript', 'Tailwind', 'Node.js', 'PostgreSQL']}/>
+          description={'Fui responsável por todo o processo. Fiz a identidade visual, web design, front-end e api'} 
+          date={'agosto 2025 - o momento'}
+        stack={['Next', 'TypeScript', 'Tailwind', 'Node.js', 'mongoDB']}/>
       </div>  
       </section>
       

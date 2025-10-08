@@ -37,8 +37,7 @@ export default function Home() {
           <span className="text-gray-800">Olá, eu sou</span>
           Sofia Parreira Passos
         </h1>
-        <h2 className="text-xl font-medium text-gray-700">Desenvolvedora web front-end e back-end</h2>
-        <p className="text-gray-600 py-8">Transformo suas ideias em experi~enciadsçfasdflkasdjfalkjsdflkjasdlkfjalksjdflkasjdfas</p>
+        <h2 className="text-xl font-medium text-gray-700 mb-8">Desenvolvedora web front-end e back-end</h2>
 
         <div class="w-fit">
           <Button 
@@ -51,7 +50,7 @@ export default function Home() {
 
         <div className="py-8 grid grid-cols-3 gap-16">
           <ItemNumber label={'Projetos Concluídos'} value={'10 +'} />
-          <ItemNumber label={'Anos de Experiência'} value={'3 +'} />
+          <ItemNumber label={'Anos de Experiência'} value={'2'} />
           <ItemNumber label={'Avaliação Média'} value={'5 ★'} />
 
         </div>
@@ -168,7 +167,6 @@ export default function Home() {
 
       <section className="px-48 py-16">
         <h1 className="text-3xl font-bold mb-2 text-center">Feedbacks</h1>
-        <p className="text-center">Feedb</p>
 
         <div className="grid grid-cols-3 mt-16 gap-4">
           <CardFeedback
@@ -215,6 +213,8 @@ export default function Home() {
             <Button
               text={'WhatsApp'}
               prefix={<LuMessageCircleMore />}
+              onClick={() => window.open('https://wa.me/5531999050065', '_blank')}
+
               className={'bg-gray-800 text-white border border-gray-200 hover:bg-gray-900 duration-300'}
             />
           </div>

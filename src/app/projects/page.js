@@ -8,7 +8,6 @@ const page = () => {
       <Navbar />
       <section className='p-24 r flex flex-col justify-center items-center'>
         <h1 className='text-3xl mb-2 font-bold text-cente'>Meus Projetos</h1>
-      <p className='text-gray-700 text-cente'>Uma seleção dos meus trabalhos mais recentes</p>
 <div className='w-full flex justify-start items-start mt-16 mb-8'>
   <div className='relative pl-3 border-l-2 border-primary/40'>
     <p className='text-sm text-gray-600 leading-relaxed max-w-2xl'>

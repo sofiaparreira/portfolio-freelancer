@@ -22,7 +22,8 @@ const CardProject = ({ title, description, image, link, isFeatured, stack, date,
             <h2 className='text-lg font-semibold group-hover:text-primary'>{title}</h2>
             {isFeatured && <span className='bg-gradient-to-r from-primary to-purple-600 text-white rounded-full w-fit px-3 py-1 text-xs'>Destaque</span>}
           </div>
-          <span className='w-full text-sm text-gray-500'>Cliente: {client}</span>
+          {client && <span className='w-full text-sm text-gray-500'>Cliente: {client}</span>
+}
           <p className='text-gray-700 mt-2 mb-2 text-left'>{description}</p>
           <div className='flex items-center gap-2'>
             {stack.map((item) => (

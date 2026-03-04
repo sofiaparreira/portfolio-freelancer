@@ -16,7 +16,7 @@ export default function TypewriterName({ text }) {
   }, [text]);
 
   return (
-    <h1 className="text-7xl font-bold mb-8 max-w-2xl leading-tight">
+    <h1 className="text-8xl font-bold mb-8 max-w-3xl leading-tight">
       {displayed}
       <span className="animate-pulse">|</span>
     </h1>

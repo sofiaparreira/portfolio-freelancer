@@ -8,20 +8,50 @@ import TypewriterName from "./components/TypewriterName"
 import ServiceCard from "./components/ServiceCard"
 import { Code2, Lamp } from "lucide-react"
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import { Navigation, Pagination, Autoplay } from "swiper/modules"
-
 function App() {
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  }
 
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  }
 
+  const othersServicesVariants = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+}
   return (
     <main className="">
       <Header />
-      <section className="relative h-screen grid grid-cols-2 items-center px-10 overflow-hidden">
+      <section className="relative h-screen grid grid-cols-2 items-center px-12 overflow-hidden">
 
         <AnimatedBackground />
 
@@ -55,86 +85,60 @@ function App() {
       </section>
 
 
-      <section className="bg-[var(--primary-dark)] py-16 px-5 ">
+      <section className="bg-[var(--primary-dark)] py-16 px-12 ">
         <div className="flex gap-8">
-          <div className="w-[370px]">
-            <h2 className="text-5xl text-white">Serviços</h2>
+          <div className="w-[600px]">
+            <h2 className="text-6xl text-white">Serviços</h2>
             <p className="text-zinc-100/90 text-sm mt-4">Aqui estão alguns dos serviços que ofereço. Também aceitos propostas personalizadas, não estou engessada nestes.</p>
           </div>
-          <div className=" w-[calc(100%-400px)]">
-            {/* conteúdo */}  <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={8}
-              pagination={{ clickable: true }} // habilita pontinhos
-              slidesPerView={4}
-              autoplay={{ delay: 4000 }}
-              navigation={{
-                nextEl: ".custom-next",
-                prevEl: ".custom-prev",
-              }}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-              }}
-            >          <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Web designs"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ServiceCard
-                  icon={<Code2 size={24} />}
-                  title="Sistemas Web"
-                  description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
-                />
-              </SwiperSlide>
-            </Swiper>
-            <div className="flex justify-center gap-4 mt-4">
-              <button className="custom-prev px-4 py-2 bg-zinc-700 text-white rounded-lg">◀</button>
-              <button className="custom-next px-4 py-2 bg-zinc-700 text-white rounded-lg">▶</button>
-            </div>
-          </div>
+
+          <motion.div
+            className="flex gap-4 items-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.div variants={cardVariants}>
+              <ServiceCard
+                icon={<Code2 size={24} />}
+                title="Sistemas Web"
+                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+              />
+            </motion.div>
+
+            <motion.div variants={cardVariants}>
+              <ServiceCard
+                icon={<Code2 size={24} />}
+                title="Sistemas Web"
+                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+              />
+            </motion.div>
+
+            <motion.div variants={cardVariants}>
+              <ServiceCard
+                icon={<Code2 size={24} />}
+                title="Sistemas Web"
+                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+              />
+            </motion.div>
+
+            <motion.div variants={cardVariants}>
+              <ServiceCard
+                icon={<Code2 size={24} />}
+                title="Web designs"
+                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+              />
+            </motion.div>
+          </motion.div>
         </div>
-        \
-        <div className="relative mt-16 overflow-hidden border border-zinc-100/10 bg-gradient-to-r from-[var(--primary-dark)] via-zinc-800/60 to-[var(--primary-dark)] p-px">
+
+        <motion.div 
+          variants={othersServicesVariants} 
+          viewport={{once: true, amount: 0.2}}  
+          initial="hidden"
+          whileInView="visible" 
+          className="relative mt-16 overflow-hidden border border-zinc-100/10 bg-gradient-to-r from-[var(--primary-dark)] via-zinc-800/60 to-[var(--primary-dark)] p-px">
           {/* Glow de borda */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
 
@@ -162,11 +166,11 @@ function App() {
             {/* CTA */}
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="bg-[var(--primary-light)] py-16 px-5">
-          <h2 className="text-5xl text-[var(--primary-dark)]">Produtos</h2>
+      <section className="bg-[var(--primary-light)] py-16 px-12">
+        <h2 className="text-5xl text-[var(--primary-dark)]">Projetos</h2>
 
 
       </section>

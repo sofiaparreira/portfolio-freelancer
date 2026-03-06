@@ -5,7 +5,7 @@ import PrimaryButton from "../PrimaryButton";
 import { smoothScrollTo } from "../../utils/smoothScrollTo";
 
 const navItems = [
-    { label: "Sobre mim", href: "#inicio" },
+    { label: "Início", href: "#inicio" },
     { label: "Serviços", href: "#servicos" },
     { label: "Projetos", href: "#projetos" },
 ];

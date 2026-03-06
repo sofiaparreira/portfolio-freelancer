@@ -87,8 +87,8 @@ function App() {
 
 
       <section id="servicos" className="bg-[var(--primary-dark)] px-4 py-16 md:px-10 lg:px-12">
-        <div className="flex max-lg:flex-col lg:gap-8 gap-3">
-          <div className="lg:w-[650px] w-full max-lg:mb-6">
+        <div className="flex max-lg:flex-col lg:gap-6 gap-3">
+          <div className="lg:min-w-[290px] w-full max-lg:mb-6">
             <h2 className="text-6xl text-white">Serviços</h2>
             <p className="text-zinc-100/90 text-sm lg:mt-4">Aqui estão alguns dos serviços que ofereço. Também aceitos propostas personalizadas, não estou engessada nestes.</p>
           </div>
@@ -104,31 +104,31 @@ function App() {
               <ServiceCard
                 icon={<Code2 size={24} />}
                 title="Sistemas Web"
-                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+                description="Criação de sistemas web completos, do design à implementação, com funcionalidades e interfaces personalizadas para atender às necessidades do seu negócio."
               />
             </motion.div>
 
             <motion.div variants={cardVariants}>
               <ServiceCard
                 icon={<Code2 size={24} />}
-                title="Sistemas Web"
-                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+                title="Sites Institucionais"
+                description="Desenvolvimento de sites institucionais com design profissional e responsivo, focados em apresentar sua empresa, serviços e fortalecer a presença digital da marca."
               />
             </motion.div>
 
             <motion.div variants={cardVariants}>
               <ServiceCard
                 icon={<Code2 size={24} />}
-                title="Sistemas Web"
-                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+                title="Landing Pages"
+                description="Criação de landing pages estratégicas desenvolvidas para gerar conversões, captar leads e destacar seus produtos ou serviços."
               />
             </motion.div>
 
             <motion.div variants={cardVariants}>
               <ServiceCard
                 icon={<Code2 size={24} />}
-                title="Web designs"
-                description="Criação de aplicações modernas com React, Next.js e foco em performance, SEO e escalabilidade."
+                title="Web Designs"
+                description="Criação de web designs para sites e aplicações web, com foco em experiência do usuário (UX), interface intuitiva (UI) e identidade visual alinhada com a marca."
               />
             </motion.div>
           </motion.div>

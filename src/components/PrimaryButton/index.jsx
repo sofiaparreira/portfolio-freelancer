@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { smoothScrollTo } from "../../utils/smoothScrollTo";
 
 const PrimaryButton = ({
   text,
@@ -33,11 +34,19 @@ const PrimaryButton = ({
   `;
 
   if (href) {
+    const isSectionLink = href.startsWith("#") && !target;
+
     return (
       <motion.a
         href={href}
         target={target}
         rel={rel}
+        onClick={(event) => {
+          if (isSectionLink) {
+            event.preventDefault();
+            smoothScrollTo(href);
+          }
+        }}
         whileHover={{ y: -3 }}
         whileTap={{ y: 0, scale: 0.98 }}
         transition={{ type: "spring", stiffness: 300, damping: 18 }}

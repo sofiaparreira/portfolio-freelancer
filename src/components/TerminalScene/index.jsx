@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export default function TerminalWidget() {
   return (
-    <div className="w-[380px] h-[230px] relative">
+    <div className="relative w-[85vw] max-w-[380px] aspect-[380/230]">
       <motion.svg
         viewBox="0 0 380 230"
         className="w-full h-full"

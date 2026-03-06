@@ -64,11 +64,11 @@ export function ProjectsSection() {
   }
 
   return (
-    <section className="min-h-screen bg-[var(--primary-light)] px-6 py-20 md:px-12 lg:px-20">
+    <section id="projetos" className="min-h-screen bg-[var(--primary-light)] px-4 py-20 md:px-12 lg:px-20">
       <div className="mx-auto">
         <div className="mb-8 text-left">
           
-          <h2 className="mb-1 text-4xl font-bold text-zinc-900 md:text-5xl lg:text-6xl">
+          <h2 className="mb-1 text-6xl font-bold text-zinc-900 md:text-5xl lg:text-6xl">
             Projetos </h2>
       
         </div>

@@ -27,36 +27,36 @@ export function ContactSection() {
             href={emailComposeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-1 items-center justify-between bg-[var(--primary-light)] p-8 transition-all duration-300 hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-900/20"
+            className="group flex flex-1 items-center justify-between bg-[var(--primary-light)] p-5 transition-all duration-300 hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-900/20 md:p-8"
           >
-            <div className="flex items-center gap-5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-zinc-800 transition-colors group-hover:bg-zinc-700">
-                <Mail className="h-6 w-6 text-white" />
+            <div className="flex items-center gap-3 md:gap-5">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800 transition-colors group-hover:bg-zinc-700 md:h-14 md:w-14">
+                <Mail className="h-5 w-5 text-white md:h-6 md:w-6" />
               </div>
               <div>
-                <span className="block text-sm font-medium text-zinc-600 transition-colors group-hover:text-zinc-300">Email</span>
-                <span className="text-xl font-semibold text-zinc-900 transition-colors group-hover:text-white">{contactInfo.email}</span>
+                <span className="block text-xs font-medium text-zinc-600 transition-colors group-hover:text-zinc-300 md:text-sm">Email</span>
+                <span className="text-base font-semibold text-zinc-900 transition-colors group-hover:text-white md:text-xl">{contactInfo.email}</span>
               </div>
             </div>
-            <ArrowUpRight className="h-6 w-6 text-zinc-700 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white" />
+            <ArrowUpRight className="h-5 w-5 text-zinc-700 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white md:h-6 md:w-6" />
           </a>
 
           <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-            className="group flex flex-1 items-center justify-between bg-[var(--primary-light)] p-8 transition-all duration-300 hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-900/20"
+            className="group flex flex-1 items-center justify-between bg-[var(--primary-light)] p-5 transition-all duration-300 hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-900/20 md:p-8"
           >
-            <div className="flex items-center gap-5">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-zinc-800 transition-colors group-hover:bg-zinc-700">
-                <Phone className="h-6 w-6 text-white" />
+            <div className="flex items-center gap-3 md:gap-5">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-800 transition-colors group-hover:bg-zinc-700 md:h-14 md:w-14">
+                <Phone className="h-5 w-5 text-white md:h-6 md:w-6" />
               </div>
               <div>
-                  <span className="block text-sm font-medium text-zinc-600 transition-colors group-hover:text-zinc-300">WhatsApp</span>
-                  <span className="text-xl font-semibold text-zinc-900 transition-colors group-hover:text-white">{contactInfo.phone}</span>
+                  <span className="block text-xs font-medium text-zinc-600 transition-colors group-hover:text-zinc-300 md:text-sm">WhatsApp</span>
+                  <span className="text-base font-semibold text-zinc-900 transition-colors group-hover:text-white md:text-xl">{contactInfo.phone}</span>
               </div>
             </div>
-            <ArrowUpRight className="h-6 w-6 text-zinc-700 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white" />
+            <ArrowUpRight className="h-5 w-5 text-zinc-700 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white md:h-6 md:w-6" />
           </a>
         </div>
 

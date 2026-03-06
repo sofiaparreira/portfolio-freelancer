@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import TypewriterName from "./components/TypewriterName"
 import ServiceCard from "./components/ServiceCard"
 import { Code2, Lamp } from "lucide-react"
+import { ProjectsSection } from "./components/ProjectSection"
 
 function App() {
 
@@ -169,11 +170,7 @@ function App() {
         </motion.div>
       </section>
 
-      <section className="bg-[var(--primary-light)] py-16 px-12">
-        <h2 className="text-5xl text-[var(--primary-dark)]">Projetos</h2>
-
-
-      </section>
+      <ProjectsSection />
 
 
 

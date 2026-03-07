@@ -53,7 +53,9 @@ export function ProjectCard({
             <PrimaryButton
               text="Ver Projeto"
               isLight
-              href="#contato"
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               icon={<ExternalLink size={16} />}
               className="px-5 py-2.5 text-[11px] md:px-8 md:py-3.5 md:text-xs"
             />

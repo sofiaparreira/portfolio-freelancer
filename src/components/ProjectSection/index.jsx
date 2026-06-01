@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { ProjectCard } from "../ProjectCard"
 import meuapeProject from "../../assets/meuape-project.jpg"
 import axyunProject from "../../assets/axyuncapital-project.png"
-import verticeProject from "../../assets/vertice-project.png"
+import verticeProject from "../../assets/vertice.png"
 import sonoroDespertarProject from "../../assets/sonorodespertar.png"
 
 const projects = [

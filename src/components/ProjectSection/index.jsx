@@ -12,7 +12,7 @@ const projects = [
     id: 1,
     title: "Meu Apê Certo - Sistema de Imobiliária",
     description:
-      "Plataforma completa para a imobiliária Meu Apê Certo, com funciondalidades de busca avançada de imóveis, módulos de pagamentos, gerenciamento de usuários e controle de permissões, análise de crédito, simulação financeira, dashbaords e estatísticas de imóveis e empreendimentos e muito mais. O projeto ainda está em desenvolvimento.",
+      "Plataforma completa para a imobiliária Meu Apê Certo, com funciondalidades de busca avançada de imóveis, módulos de pagamentos, gerenciamento de usuários, controle de permissões, análise de crédito, simulação financeira, dashbaords e estatísticas de empreendimentos, etc. ",
     image: meuapeProject,
     imagePosition: "center",
     tags: ["Next.js", "Node.js", "TypeScript", "Tailwind"],
@@ -31,7 +31,7 @@ const projects = [
   {
     id: 3,
     title: 'Sonoro Despertar - Site Institucional',
-    description: "Site institucional desenvolvido para uma organização sem fins lucrativos que oferece aulas de flauta para crianças em situação de vulnerabilidade social. O projeto tem como objetivo promover inclusão, desenvolvimento pessoal e disciplina por meio da música. Fui responsável pela criação de toda a identidade visual, experiência do usuário (UX/UI) e implementação completa do site.",
+    description: "Site institucional desenvolvido para uma instituição sem fins lucrativos que oferece aulas de flauta para crianças em situação de vulnerabilidade social. O projeto tem como objetivo promover educação, desenvolvimento pessoal por meio da música. Fui responsável pela criação da identidade visual, UX/UI e codificação do site.",
     image: sonoroDespertarProject,
     imagePosition: "top",
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
@@ -41,7 +41,7 @@ const projects = [
     id: 4,
     title: "Vértice CyberSecurity - LandingPage",
     description:
-      "Landing page desenvolvida para uma empresa de cibersegurança com foco em conversão de leads. O projeto foi estruturado com design moderno, responsivo e otimizado para SEO e performance, visando maximizar a captação de potenciais clientes.",
+      "Landing page desenvolvida para uma empresa de cibersegurança com foco na conversão de leads e fortalecimento da presença digital da marca. O projeto foi estruturado com design moderno, responsivo e otimizado para SEO e performance, proporcionando uma navegação intuitiva e destacando os principais serviços da empresa para maximizar a captação de potenciais clientes.",
     image: verticeProject,
     imagePosition: "center",
     tags: ["React.js", "JavaScript", "Tailwind"],

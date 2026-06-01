@@ -32,7 +32,7 @@ export function ProjectCard({
           loading="lazy"
           className={`absolute inset-0 h-full w-full object-cover ${objectPositionClass} transition-transform duration-700 group-hover:scale-105`}
         />
-        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-zinc-900/20 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-1/2 " />
       </div>
 
       <div className="relative bg-[var(--primary-dark)] p-5 md:p-8">

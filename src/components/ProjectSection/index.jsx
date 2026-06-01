@@ -5,6 +5,7 @@ import { ProjectCard } from "../ProjectCard"
 import meuapeProject from "../../assets/meuape-project.jpg"
 import axyunProject from "../../assets/axyuncapital-project.png"
 import verticeProject from "../../assets/vertice-project.png"
+import sonoroDespertarProject from "../../assets/sonorodespertar.png"
 
 const projects = [
   {
@@ -13,6 +14,7 @@ const projects = [
     description:
       "Plataforma completa para a imobiliária Meu Apê Certo, com funciondalidades de busca avançada de imóveis, módulos de pagamentos, gerenciamento de usuários e controle de permissões, análise de crédito, simulação financeira, dashbaords e estatísticas de imóveis e empreendimentos e muito mais. O projeto ainda está em desenvolvimento.",
     image: meuapeProject,
+    imagePosition: "center",
     tags: ["Next.js", "Node.js", "TypeScript", "Tailwind"],
     liveUrl: "https://app.meuapecerto.com.br",
   },
@@ -22,15 +24,26 @@ const projects = [
     description:
       "Site institucional desenvolvido para uma empresa de investimentos, com design moderno, responsivo e foco em experiência do usuário. O projeto foi otimizado para SEO e alta performance, garantindo melhor indexação nos mecanismos de busca e carregamento rápido das páginas.",
     image: axyunProject,
+    imagePosition: "center",
     tags: ["HTML", "CSS", "JavaScript", "PHP"],
     liveUrl: "https://axyuncapital.com",
   },
   {
     id: 3,
+    title: 'Sonoro Despertar - Site Institucional',
+    description: "Site institucional desenvolvido para uma organização sem fins lucrativos que oferece aulas de flauta para crianças em situação de vulnerabilidade social. O projeto tem como objetivo promover inclusão, desenvolvimento pessoal e disciplina por meio da música. Fui responsável pela criação de toda a identidade visual, experiência do usuário (UX/UI) e implementação completa do site.",
+    image: sonoroDespertarProject,
+    imagePosition: "top",
+    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+    liveUrl: 'https://sonorodespertar.org.br'
+  },
+  {
+    id: 4,
     title: "Vértice CyberSecurity - LandingPage",
     description:
       "Landing page desenvolvida para uma empresa de cibersegurança com foco em conversão de leads. O projeto foi estruturado com design moderno, responsivo e otimizado para SEO e performance, visando maximizar a captação de potenciais clientes.",
     image: verticeProject,
+    imagePosition: "center",
     tags: ["React.js", "JavaScript", "Tailwind"],
     liveUrl: "https://vertice-cybersecurity.vercel.app",
   },

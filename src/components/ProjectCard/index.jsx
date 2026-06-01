@@ -7,11 +7,18 @@ export function ProjectCard({
   title,
   description,
   image,
+  imagePosition = "center",
   tags = [],
   liveUrl,
   githubUrl,
   isLarge = false,
 }) {
+  const objectPositionClass = {
+    top: "object-top",
+    center: "object-center",
+    bottom: "object-bottom",
+  }[imagePosition] || "object-center"
+
   return (
     <div
       className={`group relative overflow-hidden rounded-lg bg-zinc-900 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] ${
@@ -23,7 +30,7 @@ export function ProjectCard({
           src={image}
           alt={title}
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className={`absolute inset-0 h-full w-full object-cover ${objectPositionClass} transition-transform duration-700 group-hover:scale-105`}
         />
         <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-zinc-900/20 to-transparent" />
       </div>
